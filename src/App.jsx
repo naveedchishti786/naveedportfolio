@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa";
 
 // ===== COMPONENTS =====
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 // ===== SECTIONS (Lazy Loading) =====
 const Hero = lazy(() => import("./Sections/Hero"));
