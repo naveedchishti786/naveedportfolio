@@ -22,6 +22,7 @@ import laundryImg from "../assets/projects/laundry.jpg";
 import pharmacyImg from "../assets/projects/pharmacy.jpg";
 import ecommerceImg from "../assets/projects/ecommerce.jpg";
 import foodImg from "../assets/projects/food.jpg";
+import portfolioMockup from "../assets/projects/portfolio_mockup.jpg";
 import profileImg from "../assets/profile.jpg";
 
 // ===== TECH ICON MAPPING =====
@@ -160,7 +161,7 @@ const projects = [
     tech: ["React", "Tailwind", "JavaScript"],
     github: "https://github.com/naveedchishti786/portfolio",
     live: "https://naveed-portfolio.vercel.app",
-    image: profileImg,
+    image: portfolioMockup,
     featured: false,
   },
 ];
@@ -266,7 +267,9 @@ const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                      className={`w-full h-full ${
+                        project.id === 1 ? "object-contain p-4 bg-white" : "object-cover object-top"
+                      } group-hover:scale-105 transition-transform duration-500`}
                     />
                   ) : (
                     <div
