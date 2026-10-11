@@ -11,54 +11,61 @@ import {
   FaCheckCircle,
   FaExclamationCircle,
 } from "react-icons/fa";
+import { SiUpwork, SiFiverr } from "react-icons/si";
 import { HiSparkles } from "react-icons/hi";
 
 // ===== DATA =====
 const contactInfo = [
   {
     icon: <FaEnvelope />,
-    label: "Email",
+    label: "Email Directly",
     value: "naveedchishti1997@gmail.com",
-    href: "https://mail.google.com/mail/u/0/#inbox",
+    href: "mailto:naveedchishti1997@gmail.com",
     color: "from-blue-500 to-cyan-400",
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/20",
   },
   {
-    icon: <FaPhone />,
-    label: "Phone",
-    value: "+971528865066",
-    href: "tel:+971528865066",
-    color: "from-green-500 to-emerald-400",
-    bgColor: "bg-green-500/10",
-    borderColor: "border-green-500/20",
-  },
-  {
-    icon: <FaMapMarkerAlt />,
-    label: "Location",
-    value: "Dubai, UAE",
-    href: "#",
-    color: "from-purple-500 to-pink-400",
-    bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/20",
-  },
-  {
     icon: <FaWhatsapp />,
-    label: "WhatsApp",
-    value: "+971528865066",
+    label: "WhatsApp Quick Chat",
+    value: "+971 52 886 5066",
     href: "https://wa.me/971528865066",
     color: "from-green-400 to-green-600",
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/20",
   },
+  {
+    icon: <SiUpwork />,
+    label: "Hire on Upwork",
+    value: "Verified Freelance Profile",
+    href: "https://www.upwork.com",
+    color: "from-emerald-500 to-teal-400",
+    bgColor: "bg-emerald-500/10",
+    borderColor: "border-emerald-500/20",
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    label: "Current Location",
+    value: "Dubai, United Arab Emirates",
+    href: "#",
+    color: "from-purple-500 to-pink-400",
+    bgColor: "bg-purple-500/10",
+    borderColor: "border-purple-500/20",
+  },
 ];
 
 const socialLinks = [
   {
-    icon: <FaGithub />,
-    href: "https://github.com/naveedchishti786",
-    label: "GitHub",
-    color: "hover:bg-gray-700 hover:border-gray-600",
+    icon: <SiUpwork />,
+    href: "https://www.upwork.com",
+    label: "Upwork",
+    color: "hover:bg-emerald-600 hover:border-emerald-500",
+  },
+  {
+    icon: <SiFiverr />,
+    href: "https://www.fiverr.com",
+    label: "Fiverr",
+    color: "hover:bg-green-600 hover:border-green-500",
   },
   {
     icon: <FaLinkedinIn />,
@@ -71,6 +78,12 @@ const socialLinks = [
     href: "https://wa.me/971528865066",
     label: "WhatsApp",
     color: "hover:bg-green-600 hover:border-green-500",
+  },
+  {
+    icon: <FaGithub />,
+    href: "https://github.com/naveedchishti786",
+    label: "GitHub",
+    color: "hover:bg-gray-700 hover:border-gray-600",
   },
 ];
 

@@ -1,21 +1,23 @@
 import { useState, useEffect, useCallback } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { SiUpwork } from "react-icons/si";
 
 const navLinks = [
   { id: 1, name: "Home", href: "#hero", icon: "🏠" },
   { id: 2, name: "About", href: "#about", icon: "👤" },
   { id: 3, name: "Services", href: "#services", icon: "💼" },
   { id: 4, name: "Projects", href: "#projects", icon: "🚀" },
-  { id: 5, name: "Skills", href: "#skills", icon: "⚡" },
-  { id: 6, name: "Contact", href: "#contact", icon: "📬" },
+  { id: 5, name: "Reviews", href: "#testimonials", icon: "⭐" },
+  { id: 6, name: "Skills", href: "#skills", icon: "⚡" },
+  { id: 7, name: "Contact", href: "#contact", icon: "📬" },
 ];
 
 const socialLinks = [
   {
-    icon: <FaGithub />,
-    href: "https://github.com/naveedchishti786",
-    label: "GitHub",
+    icon: <SiUpwork />,
+    href: "https://www.upwork.com",
+    label: "Upwork",
   },
   {
     icon: <FaLinkedinIn />,
@@ -26,6 +28,11 @@ const socialLinks = [
     icon: <FaWhatsapp />,
     href: "https://wa.me/971528865066",
     label: "WhatsApp",
+  },
+  {
+    icon: <FaGithub />,
+    href: "https://github.com/naveedchishti786",
+    label: "GitHub",
   },
 ];
 
@@ -176,7 +183,7 @@ const Navbar = () => {
             })}
 
             {/* Divider */}
-            <div className="w-px h-6 bg-gray-700 mx-3" />
+            <div className="w-px h-6 bg-gray-700 mx-2" />
 
             {/* Social Icons */}
             <div className="flex items-center gap-1">
@@ -195,6 +202,20 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
+
+            {/* Hire Me CTA button */}
+            <a
+              href="https://www.upwork.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl
+                         bg-emerald-500/10 border border-emerald-500/30 text-emerald-400
+                         hover:bg-emerald-500/20 hover:border-emerald-400 text-xs font-semibold
+                         transition-all duration-300 ml-2"
+            >
+              <SiUpwork size={13} />
+              <span>Hire Me</span>
+            </a>
           </div>
 
           {/* ===== MOBILE MENU BUTTON ===== */}

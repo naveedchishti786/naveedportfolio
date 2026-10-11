@@ -11,6 +11,7 @@ const Hero = lazy(() => import("./Sections/Hero"));
 const About = lazy(() => import("./Sections/About"));
 const Services = lazy(() => import("./Sections/Services"));
 const Projects = lazy(() => import("./Sections/Projects"));
+const Testimonials = lazy(() => import("./Sections/Testimonials"));
 const Skills = lazy(() => import("./Sections/Skills"));
 const Contact = lazy(() => import("./Sections/Contact"));
 
@@ -220,6 +221,7 @@ function App() {
               <About />
               <Services />
               <Projects />
+              <Testimonials />
               <Skills />
               <Contact />
             </Suspense>

@@ -9,6 +9,7 @@ import {
   FaPhone,
   FaWhatsapp,
 } from "react-icons/fa";
+import { SiUpwork, SiFiverr } from "react-icons/si";
 
 const footerLinks = {
   quickLinks: [
@@ -16,24 +17,32 @@ const footerLinks = {
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Projects", href: "#projects" },
+    { name: "Reviews", href: "#testimonials" },
     { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
   ],
   services: [
-    { name: "Web Development", href: "#services" },
-    { name: "React & Next.js Apps", href: "#services" },
-    { name: "Full-Stack Solutions", href: "#services" },
+    { name: "Custom Web App Development", href: "#services" },
+    { name: "API & Backend Development", href: "#services" },
+    { name: "E-Commerce & Portals", href: "#services" },
+    { name: "Modern Business Websites", href: "#services" },
+    { name: "Bug Fixing & Maintenance", href: "#services" },
     { name: "Website Redesign", href: "#services" },
-    { name: "Bug Fixes & Maintenance", href: "#services" },
   ],
 };
 
 const socialLinks = [
   {
-    icon: <FaGithub />,
-    href: "https://github.com/naveedchishti786",
-    label: "GitHub",
-    color: "hover:bg-gray-700",
+    icon: <SiUpwork />,
+    href: "https://www.upwork.com",
+    label: "Upwork",
+    color: "hover:bg-emerald-600",
+  },
+  {
+    icon: <SiFiverr />,
+    href: "https://www.fiverr.com",
+    label: "Fiverr",
+    color: "hover:bg-green-600",
   },
   {
     icon: <FaLinkedinIn />,
@@ -46,6 +55,12 @@ const socialLinks = [
     href: "https://wa.me/971528865066",
     label: "WhatsApp",
     color: "hover:bg-green-600",
+  },
+  {
+    icon: <FaGithub />,
+    href: "https://github.com/naveedchishti786",
+    label: "GitHub",
+    color: "hover:bg-gray-700",
   },
 ];
 
