@@ -77,10 +77,10 @@ const socialLinks = [
 // ===== HERO COMPONENT =====
 const Hero = () => {
   const roles = [
-    "Website Developer",
-    "Digital Marketing Expert",
-    "MERN Stack Developer",
-    "Full Stack Developer",
+    "Frontend & Full-Stack Developer",
+    "React & Next.js Specialist",
+    "MERN Stack Engineer",
+    "Web Application Developer",
   ];
   const typedText = useTypingEffect(roles);
 
@@ -100,6 +100,19 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
+            {/* Freelance Availability Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-2 mb-6
+                         rounded-full bg-emerald-500/10 border border-emerald-500/20
+                         text-emerald-400 text-xs font-semibold tracking-wide"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              Available for freelance projects
+            </motion.div>
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
               Hi, I'm{" "}
               <span
@@ -111,12 +124,17 @@ const Hero = () => {
               </span>
             </h1>
 
+            {/* Subtitle / Role */}
+            <p className="text-xl md:text-2xl font-semibold text-blue-400 mb-2">
+              Frontend & Full-Stack Web Developer
+            </p>
+
             {/* Typing */}
-            <div className="text-2xl md:text-3xl font-semibold mb-6 h-12">
-              <span className="text-gray-300">I'm a </span>
+            <div className="text-xl md:text-2xl font-medium mb-6 h-10">
+              <span className="text-gray-400">Specializing in </span>
               <span
                 className="text-transparent bg-clip-text
-                           bg-gradient-to-r from-cyan-400 to-blue-500"
+                           bg-gradient-to-r from-cyan-400 to-blue-500 font-semibold"
               >
                 {typedText}
               </span>
@@ -133,19 +151,23 @@ const Hero = () => {
               </motion.span>
             </div>
 
-            {/* Description */}
+            {/* Client-Focused Description */}
             <p
-              className="text-gray-400 text-lg leading-relaxed mb-8
+              className="text-gray-300 text-base md:text-lg leading-relaxed mb-6
                          max-w-xl mx-auto lg:mx-0"
             >
-              Passionate{" "}
-              <span className="text-white font-medium">
-                Website Developer & Digital Marketer
-              </span>{" "}
-              with a BS in Computer Science. I create modern, responsive
-              web applications and execute data-driven digital marketing 
-              campaigns to maximize online presence.
+              I build modern, responsive websites and web applications using{" "}
+              <span className="text-white font-semibold">React, Next.js, Node.js</span>, and{" "}
+              <span className="text-white font-semibold">MongoDB</span>. With 3+ years of professional experience, I help businesses and startups turn ideas and designs into fast, user-friendly web experiences.
             </p>
+
+            {/* Experience Highlight Pill */}
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-8 text-xs text-gray-400">
+              <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">⚡ 3+ Years Experience</span>
+              <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">📍 Dubai, UAE</span>
+              <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">🚀 React & Next.js</span>
+              <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10">🛡️ Full-Stack MERN</span>
+            </div>
 
             {/* Buttons */}
             <div
@@ -167,13 +189,13 @@ const Hero = () => {
               <a
                 href="#contact"
                 className="flex items-center gap-2 px-8 py-4
-                           bg-white/5 border border-white/10 text-white
-                           font-semibold rounded-xl hover:bg-white/10
-                           hover:border-white/20 hover:-translate-y-0.5
-                           transition-all duration-300"
+                           bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 text-white
+                           font-semibold rounded-xl hover:bg-purple-500/30
+                           hover:border-purple-400 hover:-translate-y-0.5
+                           transition-all duration-300 shadow-lg shadow-purple-500/10"
               >
-                <FaEnvelope size={16} />
-                Hire Me
+                <FaEnvelope size={16} className="text-purple-400" />
+                Start a Project
               </a>
             </div>
 

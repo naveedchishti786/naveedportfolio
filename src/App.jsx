@@ -9,8 +9,9 @@ import Footer from "./Components/Footer";
 // ===== SECTIONS (Lazy Loading) =====
 const Hero = lazy(() => import("./Sections/Hero"));
 const About = lazy(() => import("./Sections/About"));
-const Skills = lazy(() => import("./Sections/Skills"));
+const Services = lazy(() => import("./Sections/Services"));
 const Projects = lazy(() => import("./Sections/Projects"));
+const Skills = lazy(() => import("./Sections/Skills"));
 const Contact = lazy(() => import("./Sections/Contact"));
 
 // ===== SECTION LOADER =====
@@ -104,7 +105,7 @@ const Preloader = ({ setLoading }) => {
         transition={{ duration: 0.5, delay: 0.35 }}
         className="text-gray-400 text-sm mb-10 tracking-wide"
       >
-        MERN Stack Developer
+        Frontend & Full-Stack Web Developer
       </motion.p>
 
       {/* ===== PROGRESS BAR ===== */}
@@ -217,8 +218,9 @@ function App() {
             <Suspense fallback={<SectionLoader />}>
               <Hero />
               <About />
-              <Skills />
+              <Services />
               <Projects />
+              <Skills />
               <Contact />
             </Suspense>
           </main>

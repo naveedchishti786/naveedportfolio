@@ -5,9 +5,10 @@ import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 const navLinks = [
   { id: 1, name: "Home", href: "#hero", icon: "🏠" },
   { id: 2, name: "About", href: "#about", icon: "👤" },
-  { id: 3, name: "Skills", href: "#skills", icon: "⚡" },
+  { id: 3, name: "Services", href: "#services", icon: "💼" },
   { id: 4, name: "Projects", href: "#projects", icon: "🚀" },
-  { id: 5, name: "Contact", href: "#contact", icon: "📬" },
+  { id: 5, name: "Skills", href: "#skills", icon: "⚡" },
+  { id: 6, name: "Contact", href: "#contact", icon: "📬" },
 ];
 
 const socialLinks = [
@@ -23,7 +24,7 @@ const socialLinks = [
   },
   {
     icon: <FaWhatsapp />,
-    href: "https://wa.me/+971528865066",
+    href: "https://wa.me/971528865066",
     label: "WhatsApp",
   },
 ];
@@ -127,16 +128,16 @@ const Navbar = () => {
               </div>
               {/* Status indicator */}
               <div className="absolute -top-1 -right-1 w-3 h-3">
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500 border-2 border-gray-950" />
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 border-2 border-gray-950 animate-pulse" />
               </div>
             </div>
 
             <div className="hidden sm:block">
               <p className="text-white font-bold text-base leading-tight">
-                Hafiz Muhammad Naveed 
+                Muhammad Naveed 
               </p>
-              <p className="text-[11px] text-gray-400 font-medium tracking-wider uppercase">
-                MERN Stack Developer
+              <p className="text-[11px] text-blue-400 font-medium tracking-wider uppercase">
+                Frontend & Full-Stack Developer
               </p>
             </div>
           </a>

@@ -14,16 +14,17 @@ const footerLinks = {
   quickLinks: [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
+    { name: "Services", href: "#services" },
     { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
   ],
   services: [
-    { name: "Web Development", href: "#" },
-    { name: "Frontend Design", href: "#" },
-    { name: "Backend APIs", href: "#" },
-    { name: "Database Design", href: "#" },
-    { name: "Full Stack Apps", href: "#" },
+    { name: "Web Development", href: "#services" },
+    { name: "React & Next.js Apps", href: "#services" },
+    { name: "Full-Stack Solutions", href: "#services" },
+    { name: "Website Redesign", href: "#services" },
+    { name: "Bug Fixes & Maintenance", href: "#services" },
   ],
 };
 
@@ -121,10 +122,10 @@ const Footer = () => {
             >
               <div>
                 <h3 className="text-white text-xl md:text-2xl font-bold">
-                  Let's Work Together 🚀
+                  Have a website or web app in mind? 🚀
                 </h3>
                 <p className="text-gray-400 mt-1 text-sm md:text-base">
-                  Have a project in mind? I'd love to hear about it.
+                  Tell me what you're building, and I'll help turn it into a working product.
                 </p>
               </div>
               <a
@@ -136,7 +137,7 @@ const Footer = () => {
                            hover:-translate-y-0.5 active:scale-95 
                            transition-all duration-300 whitespace-nowrap"
               >
-                Start a Conversation
+                Start a Project
               </a>
             </div>
           </div>
@@ -173,10 +174,10 @@ const Footer = () => {
                     </span>
                   </p>
                   <p
-                    className="text-[11px] text-gray-500 font-medium 
+                    className="text-[11px] text-blue-400 font-medium 
                                 tracking-wider uppercase"
                   >
-                    MERN Stack Developer
+                    Frontend & Full-Stack Developer
                   </p>
                 </div>
               </a>

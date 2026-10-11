@@ -4,7 +4,8 @@ import {
   FaGithub,
   FaExternalLinkAlt,
   FaFolder,
-  FaStar,
+  FaCheckCircle,
+  FaArrowRight,
 } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi";
 import {
@@ -14,9 +15,13 @@ import {
   SiExpress,
   SiJavascript,
   SiTailwindcss,
+  SiRedux,
 } from "react-icons/si";
 
 import laundryImg from "../assets/projects/laundry.jpg";
+import pharmacyImg from "../assets/projects/pharmacy.jpg";
+import ecommerceImg from "../assets/projects/ecommerce.jpg";
+import foodImg from "../assets/projects/food.jpg";
 import profileImg from "../assets/profile.jpg";
 
 // ===== TECH ICON MAPPING =====
@@ -24,83 +29,149 @@ const techIcons = {
   React: { icon: <SiReact />, color: "text-cyan-400" },
   "Node.js": { icon: <SiNodedotjs />, color: "text-green-500" },
   MongoDB: { icon: <SiMongodb />, color: "text-green-400" },
-  Express: { icon: <SiExpress />, color: "text-gray-400" },
+  Express: { icon: <SiExpress />, color: "text-gray-300" },
   JavaScript: { icon: <SiJavascript />, color: "text-yellow-400" },
   Tailwind: { icon: <SiTailwindcss />, color: "text-cyan-300" },
+  Redux: { icon: <SiRedux />, color: "text-purple-400" },
 };
 
-// ===== YOUR PROJECTS =====
+// ===== CLIENT-FOCUSED PROJECTS DATA =====
 const projects = [
   {
     id: 1,
     title: "Chanzeleze Laundry",
-    description:
-      "Professional company website for Chanzeleze Laundry featuring service listings, online booking, pricing plans, and customer testimonials.",
+    type: "Business Website & Booking Platform",
+    clientTag: "Commercial Client · Dubai, UAE",
+    category: "client",
+    problem:
+      "Business relied on manual phone bookings without a unified online catalog, pricing breakdown, or digital booking system.",
+    solution:
+      "Engineered a responsive web platform with interactive service menus, automated price estimations, customer booking forms, and WhatsApp inquiry triggers.",
+    result:
+      "Digitized customer order intake, simplified booking workflows, and strengthened their local UAE market presence.",
     tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
     github: "https://github.com/naveedchishti786/chanzeleze-laundry",
     live: "https://laundry-flame-five.vercel.app/",
     image: laundryImg,
+    featured: true,
   },
   {
     id: 2,
-    title: "Online Pharmacy System",
-    description:
-      "Web-based pharmacy management system with prescription handling, inventory tracking, order management, and automated low-stock alerts.",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com/naveedchishti786/pharmacy",
-    live: "https://pharmacy-demo.vercel.app",
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    description:
-      "Modern, responsive portfolio website built with React and Tailwind CSS featuring smooth animations, dark theme, and interactive UI.",
-    tech: ["React", "Tailwind", "JavaScript"],
-    github: "https://github.com/naveedchishti786/portfolio",
-    live: "https://naveed-portfolio.vercel.app",
-    image: profileImg,
-  },
-  {
-    id: 4,
     title: "Accurate Tax Consultancy",
-    description:
-      "Professional business solutions website offering VAT Filing, Corporate Tax, Accounting, and PRO Services in Dubai, UAE.",
+    type: "Corporate Financial & Tax Portal",
+    clientTag: "Corporate Service · Dubai, UAE",
+    category: "client",
+    problem:
+      "Required an authoritative digital presence to present Corporate Tax, VAT Filing, and PRO services to UAE businesses.",
+    solution:
+      "Developed a corporate website featuring structured service breakdowns, compliance advisory forms, and fast mobile-optimized pages.",
+    result:
+      "Established brand credibility with corporate clients and increased consultation appointment requests.",
     tech: ["React", "Tailwind", "JavaScript"],
     github: "https://github.com/naveedchishti786",
     live: "https://vatreg.netlify.app/",
     image: "/tax.jpeg",
+    featured: true,
   },
   {
-    id: 5,
+    id: 3,
     title: "Zoya Premium Curtain",
-    description:
-      "Professional business website for Zoya Premium Curtain featuring elegant curtain collections, services, and online booking.",
+    type: "Luxury Interior & Product Showcase",
+    clientTag: "E-Commerce & Showcase · Dubai, UAE",
+    category: "client",
+    problem:
+      "Needed an elegant visual catalog for bespoke fabric collections and an easy way for customers to schedule home measurement visits.",
+    solution:
+      "Built a high-performance visual catalog featuring curated fabric galleries, mobile-friendly navigation, and direct consultation scheduling.",
+    result:
+      "Enhanced product presentation quality and made customer consultation inquiries seamless.",
     tech: ["React", "Tailwind", "JavaScript"],
     github: "https://github.com/naveedchishti786",
     live: "https://zoyacurtain.netlify.app/",
     image: "/zoya.jpeg",
+    featured: true,
+  },
+  {
+    id: 4,
+    title: "Online Pharmacy System",
+    type: "Healthcare & Inventory Platform",
+    clientTag: "Full-Stack Web Application",
+    category: "app",
+    problem:
+      "Manual medicine record keeping caused stock discrepancies and delays in tracking prescription orders.",
+    solution:
+      "Built a full-stack MERN application with automated low-stock inventory alerts, prescription management, and an administrative control panel.",
+    result:
+      "Prevented stockout incidents through real-time notifications and streamlined fulfillment speed.",
+    tech: ["React", "Node.js", "MongoDB", "Express"],
+    github: "https://github.com/naveedchishti786/pharmacy",
+    live: "https://pharmacy-demo.vercel.app",
+    image: pharmacyImg,
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "Naveed Express E-commerce",
+    type: "Multi-Category Retail Platform",
+    clientTag: "E-Commerce Solution",
+    category: "ecommerce",
+    problem:
+      "Standard template e-commerce stores often suffered from sluggish filtering and poor mobile checkout responsiveness.",
+    solution:
+      "Engineered a high-performance React store with real-time multi-criteria filtering, shopping cart state management, and streamlined checkout UI.",
+    result:
+      "Fast page load times with instant product discovery across mobile and desktop devices.",
+    tech: ["React", "Redux", "Tailwind", "JavaScript"],
+    github: "https://github.com/naveedchishti786",
+    live: "https://naveed-express.vercel.app/",
+    image: ecommerceImg,
+    featured: false,
   },
   {
     id: 6,
     title: "Homemade Food Delivery",
-    description:
-      "A complete food delivery web application allowing users to browse homemade food items, add to cart, and place orders with a seamless checkout experience.",
+    type: "On-Demand Food Ordering App",
+    clientTag: "Custom Web Application",
+    category: "app",
+    problem:
+      "Home kitchens needed an independent ordering channel to bypass heavy third-party delivery portal commissions.",
+    solution:
+      "Developed a mobile-first food ordering platform with dynamic daily menus, cart calculations, and direct order confirmation.",
+    result:
+      "Direct client ordering channel without intermediate aggregator fees.",
     tech: ["React", "Tailwind", "JavaScript"],
     github: "https://github.com/naveedchishti786",
     live: "https://homemadefood-lake.vercel.app/",
+    image: foodImg,
+    featured: false,
   },
   {
     id: 7,
-    title: "Naveed Express E-commerce",
-    description:
-      "A full-featured e-commerce platform offering a wide range of products, featuring a modern UI, product filtering, shopping cart functionality, and responsive design.",
+    title: "Developer Portfolio & Client Hub",
+    type: "Modern Freelance Platform",
+    clientTag: "Portfolio & Lead Generation",
+    category: "app",
+    problem:
+      "Needed a modern platform to showcase commercial projects, freelance service offerings, and capture business leads.",
+    solution:
+      "Created an animated, responsive Vite + React web application with dark-mode glassmorphism, structured case studies, and WhatsApp direct contact.",
+    result:
+      "Sub-second load times, high visual polish, and focused client positioning.",
     tech: ["React", "Tailwind", "JavaScript"],
-    github: "https://github.com/naveedchishti786",
-    live: "https://naveed-express.vercel.app/",
+    github: "https://github.com/naveedchishti786/portfolio",
+    live: "https://naveed-portfolio.vercel.app",
+    image: profileImg,
+    featured: false,
   },
 ];
 
-// ===== GRADIENT COLORS FOR EACH CARD =====
+const filterCategories = [
+  { id: "all", label: "All Projects" },
+  { id: "client", label: "Dubai & Client Work" },
+  { id: "app", label: "Full-Stack Web Apps" },
+  { id: "ecommerce", label: "E-Commerce" },
+];
+
 const cardGradients = [
   "from-blue-600/20 via-purple-600/10 to-cyan-600/20",
   "from-green-600/20 via-teal-600/10 to-blue-600/20",
@@ -109,21 +180,26 @@ const cardGradients = [
 ];
 
 const Projects = () => {
-  const [hoveredProject, setHoveredProject] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const filteredProjects =
+    activeFilter === "all"
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
 
   return (
     <section
       id="projects"
-      className="relative py-24 bg-gray-900 text-white overflow-hidden"
+      className="relative py-24 bg-gray-900 text-white overflow-hidden border-t border-white/5"
     >
       <div className="relative max-w-7xl mx-auto px-6">
         {/* ===== HEADER ===== */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: -30 }}
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
         >
           <span
             className="inline-flex items-center gap-2 px-4 py-1.5
@@ -132,141 +208,169 @@ const Projects = () => {
                        tracking-widest uppercase mb-4"
           >
             <HiSparkles className="text-sm" />
-            My Work
+            Case Studies & Proof of Work
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-5">
-            My{" "}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
+            Featured{" "}
             <span
               className="text-transparent bg-clip-text bg-gradient-to-r
                          from-purple-400 via-pink-400 to-blue-400"
             >
-              Projects
+              Projects & Client Work
             </span>
           </h2>
 
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Real-world projects I've built from concept to deployment.
+          <p className="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">
+            Real-world digital products built for businesses and startups — showing the problem, solution, and results.
           </p>
         </motion.div>
 
+        {/* ===== FILTER TABS ===== */}
+        <div className="flex flex-wrap justify-center gap-2.5 mb-14">
+          {filterCategories.map((filter) => (
+            <button
+              key={filter.id}
+              onClick={() => setActiveFilter(filter.id)}
+              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300
+                ${
+                  activeFilter === filter.id
+                    ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg shadow-purple-500/25"
+                    : "bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10"
+                }`}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
+
         {/* ===== PROJECTS GRID ===== */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="group relative bg-white/[0.03] border
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative flex flex-col justify-between bg-white/[0.02] border
                          border-white/10 rounded-3xl overflow-hidden
-                         hover:border-purple-500/30 hover:-translate-y-2
-                         transition-all duration-500"
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
+                         hover:border-purple-500/40 hover:-translate-y-2
+                         hover:shadow-2xl hover:shadow-purple-500/10
+                         transition-all duration-400"
             >
-              {/* Card Top — Image or Gradient with Icon */}
-              <div className="relative h-48 overflow-hidden bg-white">
-                {project.image ? (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-110"
-                  />
-                ) : (
-                  <div
-                    className={`w-full h-full bg-gradient-to-br
-                      ${cardGradients[index % cardGradients.length]} flex items-center
-                      justify-center`}
-                  >
-                    <FaFolder className="text-5xl text-white/15" />
-                  </div>
-                )}
+              <div>
+                {/* Card Top: Image / Banner */}
+                <div className="relative h-48 overflow-hidden bg-gray-950 flex items-center justify-center">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div
+                      className={`w-full h-full bg-gradient-to-br
+                        ${cardGradients[index % cardGradients.length]} flex items-center
+                        justify-center`}
+                    >
+                      <FaFolder className="text-5xl text-white/20" />
+                    </div>
+                  )}
 
-                {/* Hover Overlay */}
-                <div
-                  className={`absolute inset-0 bg-gray-950/80
-                    backdrop-blur-sm flex items-center justify-center
-                    gap-4 transition-all duration-300
-                    ${
-                      hoveredProject === project.id
-                        ? "opacity-100"
-                        : "opacity-0"
-                    }`}
+                  {/* Client Tag Pill */}
+                  <div className="absolute top-4 left-4 px-3 py-1 bg-gray-950/80 backdrop-blur-md border border-white/10 rounded-lg text-xs font-medium text-cyan-300">
+                    {project.clientTag}
+                  </div>
+                </div>
+
+                {/* Card Body */}
+                <div className="p-6">
+                  {/* Title & Type */}
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-xs font-medium text-blue-400 mt-1">
+                      {project.type}
+                    </p>
+                  </div>
+
+                  {/* Problem & Solution Breakdown */}
+                  <div className="space-y-3 mb-5 text-xs sm:text-sm">
+                    <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-red-400 block mb-1">
+                        The Challenge
+                      </span>
+                      <p className="text-gray-400 leading-relaxed text-xs">
+                        {project.problem}
+                      </p>
+                    </div>
+
+                    <div className="p-3 rounded-xl bg-blue-500/[0.04] border border-blue-500/10">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-400 block mb-1">
+                        What I Built
+                      </span>
+                      <p className="text-gray-300 leading-relaxed text-xs">
+                        {project.solution}
+                      </p>
+                    </div>
+
+                    <div className="p-3 rounded-xl bg-emerald-500/[0.04] border border-emerald-500/10">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 block mb-1">
+                        The Result
+                      </span>
+                      <p className="text-emerald-300/90 leading-relaxed text-xs font-medium">
+                        {project.result}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Tech Stack Badges */}
+                  <div className="flex flex-wrap gap-1.5 mb-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 bg-white/5 border border-white/10 rounded-lg text-[11px] text-gray-300 font-medium"
+                      >
+                        <span className={techIcons[tech]?.color || "text-gray-400"}>
+                          {techIcons[tech]?.icon}
+                        </span>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Card Footer: Action Links */}
+              <div className="p-6 pt-0 flex items-center gap-3">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl
+                             bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold text-xs
+                             hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-200"
                 >
+                  <span>Live Website</span>
+                  <FaExternalLinkAlt className="text-[10px]" />
+                </a>
+
+                {project.github && (
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-2xl bg-white/10 border
-                               border-white/20 flex items-center
-                               justify-center text-white hover:bg-white
-                               hover:text-gray-900 transition-all
-                               duration-300"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl
+                               bg-white/5 border border-white/10 text-gray-300 font-semibold text-xs
+                               hover:bg-white/10 hover:text-white transition-all duration-200"
+                    title="View GitHub Code"
                   >
-                    <FaGithub size={20} />
+                    <FaGithub size={14} />
+                    <span>Code</span>
                   </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-2xl bg-gradient-to-r
-                               from-purple-500 to-blue-500 flex
-                               items-center justify-center text-white
-                               transition-all duration-300"
-                  >
-                    <FaExternalLinkAlt size={16} />
-                  </a>
-                </div>
-
-                {/* Badge */}
-                <div
-                  className="absolute top-4 left-4 px-3 py-1.5
-                             bg-yellow-500/90 rounded-lg flex
-                             items-center gap-1.5 text-gray-900
-                             text-xs font-bold"
-                >
-                  <FaStar size={10} />
-                  Featured
-                </div>
-              </div>
-
-              {/* Card Info */}
-              <div className="p-6">
-                <h4
-                  className="text-xl font-bold mb-2
-                             group-hover:text-purple-400
-                             transition-colors duration-300"
-                >
-                  {project.title}
-                </h4>
-
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="flex items-center gap-1.5 px-3
-                                 py-1.5 bg-white/5 border
-                                 border-white/10 rounded-lg text-xs
-                                 font-medium"
-                    >
-                      <span
-                        className={
-                          techIcons[tech]?.color || "text-gray-400"
-                        }
-                      >
-                        {techIcons[tech]?.icon}
-                      </span>
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                )}
               </div>
             </motion.div>
           ))}
@@ -278,7 +382,7 @@ const Projects = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <a
             href="https://github.com/naveedchishti786"
@@ -291,11 +395,10 @@ const Projects = () => {
                        transition-all duration-300 group"
           >
             <FaGithub size={20} />
-            View More on GitHub
+            Explore More Repositories on GitHub
             <FaExternalLinkAlt
               size={12}
-              className="group-hover:translate-x-1
-                         transition-transform duration-300"
+              className="group-hover:translate-x-1 transition-transform duration-300"
             />
           </a>
         </motion.div>

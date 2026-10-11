@@ -68,46 +68,53 @@ const techStack = [
   { icon: <SiGit />, name: "Git", color: "text-orange-500" },
 ];
 
-const timeline = [
+const experience = [
   {
     year: "2023 - Present",
     title: "Software Developer",
-    place: "Chanzeleze Laundry — Dubai",
+    place: "Chanzeleze Laundry — Dubai, UAE",
     description:
-      "Currently working as a software developer, designed and developed the complete company website, managing digital presence, and building internal tools to streamline business operations",
+      "Designed and developed the full company website, engineered internal operational tools, and oversee digital operations to scale business workflows.",
     current: true,
   },
   {
-    year: "2025 - 2026",
-    title: "Cyber Security Course (Completed)",
-    place: "Xaltius Academy — Singapore",
+    year: "2022 - Present",
+    title: "Freelance Frontend & Full-Stack Developer",
+    place: "Dubai & Remote",
     description:
-      "6-month intensive program covering network security, ethical hacking, vulnerability assessment, penetration testing, and security best practices",
-    current: false,
+      "Partnering with businesses and startups to build high-performance React/Next.js websites, corporate platforms (e.g. Accurate Tax, Zoya Curtains), and bespoke web applications.",
+    current: true,
   },
+];
+
+const credentials = [
   {
-    year: "2026",
-    title: "Digital Marketing Course (Completed)",
-    place: "Professional Certification",
+    year: "2018 - 2022",
+    title: "BS in Computer Science",
+    place: "Foundation University Islamabad",
     description:
-      "Comprehensive training in digital marketing strategies, SEO, social media marketing, and online campaigns to enhance brand presence.",
-    current: false,
+      "4-year degree covering software engineering principles, algorithms, data structures, and database systems.",
   },
   {
     year: "2024 - 2025",
-    title: "MERN Stack Course (Completed)",
-    place: "PNY Trainings — Arfa Karim Tower Branch, Lahore — pakistan",
+    title: "MERN Stack Specialization",
+    place: "PNY Trainings (Arfa Karim Tower)",
     description:
-      "6-month intensive hands-on training in MongoDB, Express, React, and Node.js with real-world project development",
-    current: false,
+      "Intensive hands-on mastery in MongoDB, Express, React, and Node.js with production web application development.",
   },
   {
-    year: "2018 - 2022",
-    title: "BS Computer Science (Completed)",
-    place: "Foundation University Islamabad — pakistan",
+    year: "2025 - 2026",
+    title: "Cyber Security Certification",
+    place: "Xaltius Academy — Singapore",
     description:
-      "Core CS concepts, algorithms, data structures, software engineering, and final year project development",
-    current: false,
+      "Security best practices, penetration testing fundamentals, and application vulnerability protection.",
+  },
+  {
+    year: "2026",
+    title: "Digital Marketing & SEO Certification",
+    place: "Professional Credential",
+    description:
+      "Search engine optimization (SEO), performance tracking, and conversion-focused digital strategies.",
   },
 ];
 
@@ -261,83 +268,36 @@ const About = () => {
               className="text-transparent bg-clip-text bg-gradient-to-r
                          from-blue-400 to-cyan-400"
             >
-              Hafiz Muhammad Naveed
+              Muhammad Naveed
             </span>
-            , a Website Developer & Digital Marketer
+            , Frontend & Full-Stack Web Developer
           </h3>
 
-          <div className="space-y-4 text-gray-400 text-sm sm:text-base leading-relaxed mb-8 text-center">
+          <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-3xl mx-auto">
             <p>
-              I'm a dedicated{" "}
-              <span className="text-white font-medium">
-                Website Developer & Digital Marketing Expert
-              </span>{" "}
-              with a{" "}
-              <span className="text-white font-medium">
-                BS in Computer Science
-              </span>{" "}
-              from{" "}
-              <span className="text-blue-400 font-medium">
-                Foundation University Islamabad
-              </span>{" "}
-              and{" "}
-              <span className="text-blue-400 font-medium">
-                3+ years of professional experience
-              </span>
-              . I'm currently working as a Software Developer at{" "}
-              <span className="text-white font-medium">
-                Chanzeleze Laundry
-              </span>
-              , where I designed and developed their complete website and
-              continue building internal tools to streamline business
-              operations.
+              I'm a <span className="text-white font-semibold">Frontend & Full-Stack Web Developer</span> based in <span className="text-blue-400 font-semibold">Dubai, UAE</span> with <span className="text-blue-400 font-semibold">3+ years of professional experience</span>.
             </p>
             <p>
-              I've completed an intensive{" "}
-              <span className="text-blue-400 font-medium">
-                6-month MERN Stack course
-              </span>{" "}
-              from{" "}
-              <span className="text-white font-medium">
-                PNY Trainings (Arfa Karim Tower, Lahore)
-              </span>{" "}
-              and a{" "}
-              <span className="text-blue-400 font-medium">
-                6-month Cyber Security course
-              </span>{" "}
-              from{" "}
-              <span className="text-white font-medium">
-                Xaltius Academy, Singapore
-              </span>
-              , giving me a strong foundation in both full-stack development and
-              security best practices.
+              I specialize in building responsive, modern web applications using <span className="text-white font-medium">React, Next.js, Node.js, Express, MongoDB</span>, and modern CSS frameworks like Tailwind CSS.
             </p>
             <p>
-              My passion lies in turning complex problems into simple, elegant,
-              and{" "}
-              <span className="text-white font-medium">
-                secure solutions
-              </span>{" "}
-              through clean code. I'm also open to{" "}
-              <span className="text-white font-medium">
-                freelance opportunities
-              </span>{" "}
-              and{" "}
-              <span className="text-white font-medium">
-                impactful projects
-              </span>{" "}
-              where I can contribute my skills while continuously growing as a
-              developer.
+              Currently working as a Software Developer at <span className="text-white font-medium">Chanzeleze Laundry</span> in Dubai, I designed and developed their company website and continue building internal software tools that streamline business operations.
+            </p>
+            <p>
+              I enjoy turning business requirements and Figma designs into clean, high-performance, and user-friendly digital products.
+            </p>
+            <p className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-200">
+              🚀 <span className="font-semibold text-white">Available for freelance projects:</span> Business websites, high-converting landing pages, admin dashboards, e-commerce stores, and custom full-stack web applications.
             </p>
           </div>
 
           {/* ===== Quick Info Grid ===== */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-2xl mx-auto">
             {[
-              { label: "Name", value: "Hafiz Muhammad Naveed" },
-              { label: "Email", value: "naveedchishti1997@gmail.com" },
-              { label: "Current Role", value: "Software Dev @ Chanzeleze laundry" },
-              { label: "Experience", value: "3+ Years Professional" },
+              { label: "Role", value: "Frontend & Full-Stack Developer" },
+              { label: "Location", value: "Dubai, United Arab Emirates" },
+              { label: "Current Position", value: "Software Dev @ Chanzeleze Laundry" },
+              { label: "Availability", value: "Freelance & Contract Projects" },
             ].map((info) => (
               <div
                 key={info.label}
@@ -378,7 +338,7 @@ const About = () => {
                          transition-all duration-300"
             >
               <FaEnvelope size={13} />
-              Hire Me
+              Start a Project
             </a>
             <a
               href="#projects"
@@ -390,7 +350,7 @@ const About = () => {
                          transition-all duration-300"
             >
               <FaCode size={13} />
-              View Projects
+              View My Work
             </a>
           </div>
         </motion.div>
@@ -467,93 +427,76 @@ const About = () => {
         </motion.div>
 
         {/* ===== EXPERIENCE TIMELINE ===== */}
+        {/* ===== EXPERIENCE & CREDENTIALS ===== */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.div variants={itemVariants} className="text-center mb-10">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-3">My Journey</h3>
+          <motion.div variants={itemVariants} className="text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-3">Professional Experience & Track Record</h3>
             <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
-              Education & experience that shaped my career
+              Real-world software engineering experience and technical foundations
             </p>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto">
-            {timeline.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="relative flex gap-4 sm:gap-6 pb-10 sm:pb-12 last:pb-0"
-              >
-                {/* Timeline Dot & Line */}
-                <div className="flex flex-col items-center">
-                  <div
-                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2
-                      flex-shrink-0
-                      ${
-                        item.current
-                          ? "border-blue-400 bg-blue-400 shadow-lg shadow-blue-500/50"
-                          : "border-gray-600 bg-gray-800"
-                      }`}
-                  />
-                  {index < timeline.length - 1 && (
-                    <div
-                      className="w-px h-full bg-gradient-to-b
-                                  from-gray-600 to-transparent mt-2"
-                    />
-                  )}
-                </div>
-
-                {/* Timeline Card */}
-                <div
-                  className={`group flex-1 px-4 sm:px-6 py-4 sm:py-5
-                    rounded-2xl border transition-all duration-300
-                    ${
-                      item.current
-                        ? "bg-blue-500/5 border-blue-500/20 hover:bg-blue-500/10"
-                        : "bg-white/[0.02] border-white/5 hover:bg-white/[0.05]"
-                    }`}
-                >
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 flex-wrap">
-                    <span
-                      className={`inline-block px-2.5 sm:px-3 py-1 rounded-lg
-                        text-[10px] sm:text-xs font-semibold
-                        ${
-                          item.current
-                            ? "bg-blue-500/20 text-blue-400"
-                            : "bg-white/5 text-gray-400"
-                        }`}
-                    >
-                      {item.year}
-                    </span>
-                    {item.current && (
-                      <span
-                        className="inline-flex items-center gap-1.5 px-2 sm:px-2.5
-                                   py-1 rounded-lg bg-green-500/15
-                                   text-green-400 text-[10px] sm:text-xs font-semibold"
-                      >
-                        <span
-                          className="w-1.5 h-1.5 bg-green-400
-                                     rounded-full animate-pulse"
-                        />
-                        Currently Working
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 mb-12">
+            {/* Work Experience Column */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-blue-400 flex items-center gap-2">
+                <span>💼</span> Work & Commercial Experience
+              </h4>
+              <div className="space-y-4">
+                {experience.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    className="p-5 rounded-2xl border bg-blue-500/5 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300"
+                  >
+                    <div className="flex items-center justify-between mb-2 gap-2 flex-wrap">
+                      <span className="px-2.5 py-0.5 rounded-lg text-xs font-semibold bg-blue-500/20 text-blue-400">
+                        {item.year}
                       </span>
-                    )}
-                  </div>
-                  <h4 className="text-white font-bold text-base sm:text-lg mb-1">
-                    {item.title}
-                  </h4>
-                  <p className="text-blue-400 text-xs sm:text-sm font-medium mb-2">
-                    {item.place}
-                  </p>
-                  <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                      {item.current && (
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-semibold">
+                          <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                          Active Role
+                        </span>
+                      )}
+                    </div>
+                    <h5 className="text-white font-bold text-base mb-1">{item.title}</h5>
+                    <p className="text-cyan-400 text-xs font-medium mb-2">{item.place}</p>
+                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">{item.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Education & Certifications Column */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-purple-400 flex items-center gap-2">
+                <span>🎓</span> Education & Professional Certifications
+              </h4>
+              <div className="space-y-4">
+                {credentials.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    className="p-5 rounded-2xl border bg-white/[0.02] border-white/5 hover:border-purple-500/30 transition-all duration-300"
+                  >
+                    <div className="flex items-center justify-between mb-2 gap-2 flex-wrap">
+                      <span className="px-2.5 py-0.5 rounded-lg text-xs font-semibold bg-white/5 text-gray-400">
+                        {item.year}
+                      </span>
+                    </div>
+                    <h5 className="text-white font-bold text-base mb-1">{item.title}</h5>
+                    <p className="text-purple-400 text-xs font-medium mb-2">{item.place}</p>
+                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{item.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

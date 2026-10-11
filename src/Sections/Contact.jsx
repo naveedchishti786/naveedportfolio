@@ -97,6 +97,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    serviceType: "Business Website & Landing Page",
     subject: "",
     message: "",
   });
@@ -130,7 +131,8 @@ const Contact = () => {
           template_params: {
             from_name: formData.name,
             from_email: formData.email,
-            subject: formData.subject,
+            service_type: formData.serviceType,
+            subject: formData.subject || `Inquiry for ${formData.serviceType}`,
             message: formData.message,
             to_email: "naveedchishti1997@gmail.com",
           },
@@ -139,7 +141,13 @@ const Contact = () => {
 
       if (response.ok) {
         setStatus({ submitting: false, submitted: true, error: false, errorMessage: "" });
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          serviceType: "Business Website & Landing Page",
+          subject: "",
+          message: "",
+        });
 
         setTimeout(() => {
           setStatus({ submitting: false, submitted: false, error: false, errorMessage: "" });
@@ -195,20 +203,19 @@ const Contact = () => {
                            tracking-widest uppercase mb-4"
           >
             <HiSparkles className="text-sm" />
-            Get In Touch
+            Start a Project
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-5">
-            Let's{" "}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
+            Have a website or{" "}
             <span
               className="text-transparent bg-clip-text bg-gradient-to-r 
                              from-blue-400 via-purple-400 to-cyan-400"
             >
-              Work Together
+              web app in mind?
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            I'm open to job opportunities, freelance projects, and interesting
-            collaborations. Let's connect and create something amazing!
+          <p className="text-gray-300 max-w-2xl mx-auto text-base sm:text-lg">
+            Tell me what you're building, and I'll help turn it into a fast, reliable, and user-friendly product.
           </p>
         </motion.div>
 
@@ -305,12 +312,11 @@ const Contact = () => {
                   />
                 </span>
                 <span className="text-green-400 font-semibold">
-                  Available for Work
+                  Available for Freelance Projects
                 </span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                I'm currently available for freelance projects and full-time
-                opportunities. Response time: within 24 hours.
+                Currently accepting business websites, React/Next.js web applications, and full-stack development projects for UAE & international clients. Response time: within 24 hours.
               </p>
             </motion.div>
           </motion.div>
@@ -327,10 +333,9 @@ const Contact = () => {
               className="bg-white/[0.03] border border-white/10 
                             rounded-3xl p-8 md:p-10"
             >
-              <h3 className="text-2xl font-bold mb-2">Send a Message</h3>
+              <h3 className="text-2xl font-bold mb-2">Start Your Project</h3>
               <p className="text-gray-400 text-sm mb-8">
-                Fill out the form below and I'll get back to you as soon as
-                possible.
+                Tell me what you're building, your goals, and timeline. I'll get back to you with a clear roadmap and estimated turnaround.
               </p>
 
               <form
@@ -350,7 +355,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder="Muhammad Naveed"
+                      placeholder="e.g. John Doe / Company Name"
                       className="w-full px-5 py-3.5 bg-white/5 border border-white/10 
                                  rounded-xl text-white placeholder:text-gray-500 
                                  focus:outline-none focus:border-blue-500/50 
@@ -367,7 +372,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      placeholder="naveed@example.com"
+                      placeholder="e.g. john@business.com"
                       className="w-full px-5 py-3.5 bg-white/5 border border-white/10 
                                  rounded-xl text-white placeholder:text-gray-500 
                                  focus:outline-none focus:border-blue-500/50 
@@ -376,17 +381,39 @@ const Contact = () => {
                   </div>
                 </div>
 
+                {/* Service / Project Type Selection */}
+                <div className="space-y-2">
+                  <label className="text-sm text-gray-300 font-medium">
+                    What service do you need?
+                  </label>
+                  <select
+                    name="serviceType"
+                    value={formData.serviceType}
+                    onChange={handleChange}
+                    className="w-full px-5 py-3.5 bg-gray-900 border border-white/10 
+                               rounded-xl text-white focus:outline-none focus:border-blue-500/50 
+                               transition-all duration-300 cursor-pointer"
+                  >
+                    <option value="Business Website & Landing Page">Business Website & Landing Page</option>
+                    <option value="React / Next.js Web Application">React / Next.js Web Application</option>
+                    <option value="Full-Stack MERN Development">Full-Stack MERN Development (Node/Express/MongoDB)</option>
+                    <option value="Website Redesign & Modernization">Website Redesign & Modernization</option>
+                    <option value="Bug Fixes & Ongoing Maintenance">Bug Fixes & Ongoing Maintenance</option>
+                    <option value="Custom Software / Other">Custom Software / Other</option>
+                  </select>
+                </div>
+
                 {/* Subject */}
                 <div className="space-y-2">
                   <label className="text-sm text-gray-300 font-medium">
-                    Subject
+                    Project Subject / Title
                   </label>
                   <input
                     type="text"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Project Inquiry / Job Opportunity"
+                    placeholder="e.g. New E-Commerce Website for Dubai Brand"
                     className="w-full px-5 py-3.5 bg-white/5 border border-white/10 
                                rounded-xl text-white placeholder:text-gray-500 
                                focus:outline-none focus:border-blue-500/50 
@@ -397,15 +424,15 @@ const Contact = () => {
                 {/* Message */}
                 <div className="space-y-2">
                   <label className="text-sm text-gray-300 font-medium">
-                    Message <span className="text-red-400">*</span>
+                    Project Details <span className="text-red-400">*</span>
                   </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={5}
-                    placeholder="Tell me about your project or opportunity..."
+                    rows={4}
+                    placeholder="Tell me what you're building, target deadlines, design preferences, or key features needed..."
                     className="w-full px-5 py-4 bg-white/5 border border-white/10 
                                rounded-xl text-white placeholder:text-gray-500 
                                focus:outline-none focus:border-blue-500/50 
@@ -458,12 +485,12 @@ const Contact = () => {
                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
                         />
                       </svg>
-                      Sending...
+                      Sending Project Inquiry...
                     </>
                   ) : status.submitted ? (
                     <>
                       <FaCheckCircle />
-                      Message Sent Successfully!
+                      Project Inquiry Received! I will reach out soon.
                     </>
                   ) : status.error ? (
                     <>
@@ -473,7 +500,7 @@ const Contact = () => {
                   ) : (
                     <>
                       <FaPaperPlane />
-                      Send Message
+                      Start a Project →
                     </>
                   )}
                 </button>
